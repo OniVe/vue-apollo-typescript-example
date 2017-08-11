@@ -1,0 +1,12 @@
+fragment CarFields on Car {
+  make
+  model
+  photoURL
+  price
+}
+
+query Car($id: ID!) {
+  Car(id: $id) {
+    ...CarFields
+  }
+}

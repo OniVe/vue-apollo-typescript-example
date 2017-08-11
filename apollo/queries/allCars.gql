@@ -1,0 +1,12 @@
+fragment allCarsFields on Car {
+  id
+  make
+  model
+  year
+}
+
+query allCars {
+  allCars {
+    ...allCarsFields
+  }
+}

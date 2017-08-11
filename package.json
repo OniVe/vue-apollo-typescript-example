@@ -1,0 +1,72 @@
+{
+  "name": "vue-apollo-typescript-example",
+  "version": "1.0.0",
+  "description": "A simple vue-apollo typescript example app",
+  "author": "Igor Kuritsin (OniVe) <mail@onive.ru>",
+  "license": "MIT",
+  "types": "./index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OniVe/vue-apollo-typescript-example"
+  },
+  "files": [
+    "apollo",
+    "modules",
+    "pages",
+    "plugins",
+    "store",
+    "typings",
+    "index.d.ts",
+    "nuxt.config.js",
+    "tsconfig.json"
+  ],
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "codegen-schema": "apollo-codegen introspect-schema https://api.graph.cool/simple/v1/cj1dqiyvqqnmj0113yuqamkuu --output ./apollo/schema/schema.json",
+    "codegen-types": "apollo-codegen generate ./apollo/queries/**/*.gql --schema ./apollo/schema/schema.json --target typescript --output ./apollo/schema/index.ts"
+  },
+  "config": {
+    "nuxt": {
+      "host": "127.0.0.1",
+      "port": 3000
+    }
+  },
+  "keywords": [
+    "apollo-client",
+    "nuxt",
+    "nuxt.js",
+    "nuxtjs",
+    "typescript",
+    "vue.js",
+    "vuejs",
+    "vue universal",
+    "vue ssr",
+    "vue isomorphic",
+    "vue versatile",
+    "vue-apollo"
+  ],
+  "dependencies": {
+    "apollo-client": "^1.9.1",
+    "isomorphic-fetch": "^2.2.1",
+    "nuxt": "^1.0.0-rc3",
+    "vue-apollo": "^2.1.0-beta.21",
+    "vue-class-component": "^5.0.2",
+    "vue-property-decorator": "^5.2.1",
+    "vuex-class": "^0.2.0"
+  },
+  "devDependencies": {
+    "@types/lru-cache": "^4.0.0",
+    "@types/node": "^8.0.19",
+    "@types/vue": "^2.0.0",
+    "apollo-codegen": "^0.16.5",
+    "pug": "^2.0.0-rc.3",
+    "pug-loader": "^2.3.0",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.1",
+    "ts-loader": "^2.3.2",
+    "typescript": "^2.4.2"
+  }
+}
