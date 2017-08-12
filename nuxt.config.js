@@ -18,7 +18,7 @@ module.exports = {
   },
   loading: { color: '#3B8070' },
   plugins: [
-    '~/plugins/nuxt-class-component.js'
+    '~/plugins/nuxt-class-component'
   ],
   modules: [
     '~/modules/vue-apollo',
