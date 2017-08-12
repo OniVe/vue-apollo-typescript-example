@@ -15,8 +15,8 @@
 import Vue from 'vue'
 import Component from '~/plugins/nuxt-class-component'
 
-import { allCarsFieldsFragment } from '~/apollo/schema'
-import gqlAllCars from '~/apollo/queries/allCars.gql'
+import { AllCars } from '~/apollo/schema'
+import gqlAllCars from '~/apollo/queries/AllCars.graphql'
 
 @Component({})
 export default class IndexPage extends Vue {
@@ -25,7 +25,7 @@ export default class IndexPage extends Vue {
     title: 'Cars with Apollo'
   }
 
-  allCars: allCarsFieldsFragment[] = []
+  allCars: AllCars.AllCars[] = []
 
   get apollo () {
     return {

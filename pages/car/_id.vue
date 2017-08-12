@@ -13,20 +13,21 @@
 import Vue from 'vue'
 import Component from '~/plugins/nuxt-class-component'
 
-import { CarFieldsFragment, CarQueryVariables } from '~/apollo/schema'
-import gqlCar from '~/apollo/queries/Car.gql'
+import { Nullable } from '~/models/system'
+import { Car } from '~/apollo/schema'
+import gqlCar from '~/apollo/queries/Car.graphql'
 
 @Component({})
 export default class CarPage extends Vue {
 
-  Car: CarFieldsFragment | null = null
+  Car: Nullable<Car.Car> = null
 
   get apollo () {
     return {
       Car: {
         query: gqlCar,
         prefetch: ({ route }) => ({ id: route.params.id }),
-        variables (): CarQueryVariables {
+        variables (): Car.Variables {
           return { id: this.$route.params.id }
         }
       }

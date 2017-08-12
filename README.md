@@ -4,8 +4,13 @@
 # Reference
 
 [Vue](https://vuejs.org/index.html)
+
 [Nuxt](https://nuxtjs.org/guide)
+
+[graphql-code-generator](https://github.com/dotansimha/graphql-code-generator)
+
 `./modules/typescript` [nuxt-typescript](https://github.com/nuxt/nuxt.js/tree/master/examples/typescript)
+
 `./modules/vue-apollo` [apollo-module](https://github.com/nuxt-community/apollo-module)
 
 ## Build Setup
@@ -24,11 +29,11 @@ $ npm start
 # generate static project
 $ npm run generate
 
-# Fetch graphql schema
-$ npm run codegen-schema
+#  Generate graphql typings from local schema
+$ npm run gql-gen-local
 
-# Generate graphql typings from schema
-$ npm run codegen-types
+# Generate graphql typings from remote schema
+$ npm run gql-gen-url
 
 ```
 

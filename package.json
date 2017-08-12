@@ -1,6 +1,6 @@
 {
   "name": "vue-apollo-typescript-example",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A simple vue-apollo typescript example app",
   "author": "Igor Kuritsin (OniVe) <mail@onive.ru>",
   "license": "MIT",
@@ -26,8 +26,8 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "codegen-schema": "apollo-codegen introspect-schema https://api.graph.cool/simple/v1/cj1dqiyvqqnmj0113yuqamkuu --output ./apollo/schema/schema.json",
-    "codegen-types": "apollo-codegen generate ./apollo/queries/**/*.gql --schema ./apollo/schema/schema.json --target typescript --output ./apollo/schema/index.ts"
+    "gql-gen-local": "gql-gen --file ./apollo/schema/schema.json --template ts --out ./apollo/schema/index.ts ./apollo/queries/**/*.graphql",
+    "gql-gen-url": "gql-gen --url https://api.graph.cool/simple/v1/cj1dqiyvqqnmj0113yuqamkuu --template ts --out ./apollo/schema/index.ts ./apollo/queries/**/*.graphql"
   },
   "config": {
     "nuxt": {
@@ -62,7 +62,7 @@
     "@types/lru-cache": "^4.0.0",
     "@types/node": "^8.0.19",
     "@types/vue": "^2.0.0",
-    "apollo-codegen": "^0.16.5",
+    "graphql-code-generator": "^0.8.10",
     "pug": "^2.0.0-rc.3",
     "pug-loader": "^2.3.0",
     "stylus": "^0.54.5",
