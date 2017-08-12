@@ -4,8 +4,11 @@
 # Reference
 
 [Vue](https://vuejs.org/index.html)
+
 [Nuxt](https://nuxtjs.org/guide)
+
 `./modules/typescript` [nuxt-typescript](https://github.com/nuxt/nuxt.js/tree/master/examples/typescript)
+
 `./modules/vue-apollo` [apollo-module](https://github.com/nuxt-community/apollo-module)
 
 ## Build Setup
