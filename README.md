@@ -1,7 +1,7 @@
 # vue-apollo-typescript-example
 
 > 
-# Reference
+## Reference
 
 [Vue](https://vuejs.org/index.html)
 
