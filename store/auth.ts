@@ -1,12 +1,10 @@
 import { Module } from 'vuex'
 
 import { IRootState } from 'store'
-import { User } from '~/models/auth'
-
-export type UserStateField = User | null
+import { UserData } from '~/models/auth'
 
 export class AuthState {
-  user: UserStateField = null
+  user: UserData
   token: string = ''
   authenticated: boolean = false
 }
@@ -23,7 +21,7 @@ const authModule: Module<AuthState, IRootState> = {
   },
 
   mutations: {
-    setUser (state, user: UserStateField) {
+    setUser (state, user: UserData) {
       state.user = user
     },
     setToken (state, token: string) {
